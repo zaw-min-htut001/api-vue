@@ -11,7 +11,7 @@ Route::get('/recipes', [RecipeController::class, 'index']);
 // get single recipe
 Route::get('/recipes/{recipe}', [RecipeController::class, 'show']);
 // update single recipe
-Route::patch('/recipes/{recipe}', [RecipeController::class, 'update']);
+Route::put('/recipes/{recipe}', [RecipeController::class, 'update']);
 // Delete single recipe
 Route::delete('/recipes/{recipe}', [RecipeController::class, 'destroy']);
 // Create single recipe

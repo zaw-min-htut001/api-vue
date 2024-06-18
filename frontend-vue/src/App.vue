@@ -1,3 +1,11 @@
 <template>
-  <h1 class="text-3xl font-bold bg-red-700 underline">Hello world!</h1>
+  <RouterView v-slot="{ Component }">
+    <component :is="Component" />
+  </RouterView>
 </template>
+
+<script>
+export default {};
+</script>
+
+<style lang="stylus" scoped></style>

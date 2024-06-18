@@ -16,7 +16,7 @@ class RecipeController extends Controller
     public function index()
     {
         try {
-            $recipes = Recipe::filter(request(['category']))->paginate(6);
+            $recipes = Recipe::filter(request(['category']))->orderBy('id' ,'DESC')->paginate(6);
             return $recipes;
         } catch (Exception $e) {
             return response()->json([
